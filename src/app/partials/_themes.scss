@@ -1,0 +1,34 @@
+// --theme: #1f89e5;
+:root {
+    --theme: #1f89e5;
+    --background: #ecf0f1;
+    --font: #292e57;
+    --lightColor: #faf9f9;
+    --contentBox: rgba(255, 255, 255, 0.9);
+
+    //for tables
+    --lightContrast: rgba(0, 0, 0, 0.25);
+    --shadowContrast: rgba(0, 0, 0, 0.2);
+    --tableBorder: rgba(0, 0, 0, 0.035);
+
+    //for button and forms
+    --darkContrast: rgba(0, 0, 0, 0.5);
+    --lightTheme: rgba(0, 0, 0, 0.05);
+}
+
+// .dark__theme {
+//     // --theme: #0a5ea8;
+//     --background: #2e2d2d;
+//     --font: #d6d1a8;
+//     --lightColor: #0d0d0d;
+//     --contentBox: rgba(0, 0, 0, 0.9);
+
+//     //for tables
+//     --lightContrast: rgba(255, 255, 255, 0.25);
+//     --shadowContrast: rgba(255, 255, 255, 0.1);
+//     --tableBorder: rgba(255, 255, 255, 0.035);
+
+//     //for button and forms
+//     --darkContrast: rgba(255, 255, 255, 0.5);
+//     --lightTheme: rgba(255, 255, 255, 0.05);
+// }

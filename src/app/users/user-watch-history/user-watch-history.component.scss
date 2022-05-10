@@ -1,0 +1,24 @@
+.filters__search .filter__items {
+    width: 65%;
+}
+.filters__search .search__table {
+    width: 33%;
+    .button__group {
+        justify-content: flex-end;
+    }
+}
+.summary__cards {
+    margin: 1rem 0;
+    .card.quarter__screen {
+        font-size: 0.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        min-height: 100px;
+        p {
+            text-transform: capitalize;
+            font-size: 1rem;
+            color: var(--theme);
+            line-height: 1rem;
+        }
+    }
+}

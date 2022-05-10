@@ -1,0 +1,57 @@
+@import "./themes";
+button {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    background: var(--lightTheme);
+    border-radius: 2px;
+    border: 2px solid var(--theme);
+    color: var(--theme);
+    font-weight: bold;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    gap: 0.5rem;
+    &:hover {
+        background: var(--lightTheme);
+        opacity: 1;
+    }
+    img {
+        height: 1rem;
+    }
+}
+.cta {
+    background: var(--theme);
+    color: #f2f2f2;
+    img {
+        filter: saturate(0) brightness(0) invert(1);
+    }
+    &:hover {
+        background: var(--theme);
+        opacity: 1;
+    }
+}
+.button__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    .danger__label {
+        img {
+            filter: saturate(0) brightness(0);
+        }
+    }
+}
+.heading__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    width: max-content;
+    justify-content: space-between;
+    gap: 0.5rem;
+}

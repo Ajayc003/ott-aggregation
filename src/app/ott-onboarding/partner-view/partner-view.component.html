@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="content__box">
+        <!-- <a [routerLink]="['/command/list']"><button type="button" class="default__button float-right">Back</button></a> -->
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Provider Dashboard</li>
+                <li>Provider Details</li>
+            </ul>
+        </ul>
+
+        <div class="col__md">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Provider Details</h2>
+                    <a [routerLink]="['/ott-onboarding/']"><button><img src="/assets/icons/back.svg" alt="add">
+                            Back</button></a>
+                </div>
+                <div class="partner__info">
+                    <div class="partner__info__logo"></div>
+                    <div class="partner__info__card">
+                        <h3>Provider Name</h3>
+                        <p>Tier 1</p>
+                        <p>Subscriber Count : 15K</p>
+                        <p>Last Refreshed : 1 week ago</p>
+                        <div class="button__group">
+                            <a [routerLink]="['/ott-onboarding/onboarding']">
+                                <button class="cta"><img src="/assets/icons/pencil-fill.svg" alt="cancel"> Edit</button>
+                            </a>
+                            <button><img src="/assets/icons/refresh-line.svg" alt="refresh"> Refresh Catalog</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Provider Status</td>
+                            <td><span class="label safe__label">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>Concurrent Views</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Offered Price</td>
+                            <td>Rs 500</td>
+                        </tr>
+                        <tr>
+                            <td>End User Price</td>
+                            <td>Rs 760</td>
+                        </tr>
+                        <tr>
+                            <td>Valid From</td>
+                            <td>1 Jan, 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Valid To</td>
+                            <td>1 Dec, 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Staging Key</td>
+                            <td>loremipsumdolorsitametconsectetur</td>
+                        </tr>
+                        <tr>
+                            <td>Production Key</td>
+                            <td>loremipsumdolorsitametconsectetur</td>
+                        </tr>
+                        <tr>
+                            <td>API Documentation</td>
+                            <td><button><img src="/assets/icons/download.svg" alt="Download"> Download</button></td>
+                        </tr>
+                        <tr>
+                            <td>Catalog Configurations</td>
+                            <td>
+                                <a [routerLink]="['/ott-onboarding/config']"><button><img
+                                            src="/assets/icons/settings.svg" alt="cancel"> View
+                                        Configurations</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Contact Email</td>
+                            <td>contact@provider.com</td>
+                        </tr>
+                        <tr>
+                            <td>Contact Phone</td>
+                            <td>9856471230</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

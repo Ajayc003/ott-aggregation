@@ -1,0 +1,163 @@
+<div *ngIf="!editflag" class="container">
+    <div class="content__box">
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Packages</li>
+                <li>Add Packages</li>
+            </ul>
+        </ul>
+
+        <div class="col__md">
+            <form #packageform="ngForm" (ngSubmit)="addpackagedata(packageform)">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Package Details</h2>
+                    <a [routerLink]="['/pack']"><button><img src="/assets/icons/back.svg" alt="back">
+                            Back</button></a>
+                </div>
+                <div class="row">
+                    <div class="full__screen">
+                        <label>Pack Name</label>
+                        <input type="text" name="packageName" #packageName="ngModel" [(ngModel)]="packageservice.packagedata.packageName"  >
+                    </div>
+                    <div class="full__screen">
+                        <label>Choose Providers</label>
+                        <div class="col__md">
+                            <div class="row">
+                                <div class="full__screen">
+                                    <span>2</span> Provider/s selected
+                                </div>
+                                <div class="full__screen">
+                                    <ul class="provider__selection">
+                                        <li class="active">
+                                            <div class="inner__table__img">
+                                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/78/50/12/78501299-a66b-9655-c654-0b1006e71c71/source/512x512bb.jpg"
+                                                    alt="">
+                                            </div>
+                                            Rs 200
+                                        </li>
+                                        <li class="active">
+                                            <div class="inner__table__img">
+                                                <img src="https://pngimg.com/uploads/netflix/netflix_PNG10.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://logospng.org/download/prime-video/logo-prime-video-512.png"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="half__screen">
+                        <label>Calculated Price</label>
+                        <!-- <input type="text" disabled value="200"> -->
+                        <input type="text" name="calculatedPrice" #calculatedPrice="ngModel" [(ngModel)]="packageservice.packagedata.calculatedPrice"  >
+                    </div>
+                    <div class="half__screen">
+                        <label>Selling Price</label>
+                        <!-- <input type="text"> -->
+                        <input type="text" name="sellingPrice" #sellingPrice="ngModel" [(ngModel)]="packageservice.packagedata.sellingPrice"  >
+                    </div>
+                </div>
+                <div class="button__group">
+                    <a [routerLink]="['/pack']"><button><img alt="cancel" src="/assets/icons/close-fill.svg">
+                            Cancel</button></a>
+                    <button class="cta"><img src="/assets/icons/save.svg" alt="cancel"> Save</button>
+                </div>
+            </div>
+            </form>
+        
+
+        </div>
+    </div>
+</div>
+
+<div *ngIf="editflag" class="container">
+    <div class="content__box">
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Packages</li>
+                <li>Add Packages</li>
+            </ul>
+        </ul>
+
+        <div class="col__md">
+            <form #packageform="ngForm" (ngSubmit)="updatepackagedata(packageform)">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Package Details</h2>
+                    <a [routerLink]="['/pack']"><button><img src="/assets/icons/back.svg" alt="back">
+                            Back</button></a>
+                </div>
+                <div class="row">
+                    <div class="full__screen">
+                        <label>Pack Name</label>
+                        <input type="text" name="packageName" #packageName="ngModel" [(ngModel)]="packageservice.packagedata.packageName"  >
+                    </div>
+                    <div class="full__screen">
+                        <label>Choose Providers</label>
+                        <div class="col__md">
+                            <div class="row">
+                                <div class="full__screen">
+                                    <span>2</span> Provider/s selected
+                                </div>
+                                <div class="full__screen">
+                                    <ul class="provider__selection">
+                                        <li class="active">
+                                            <div class="inner__table__img">
+                                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/78/50/12/78501299-a66b-9655-c654-0b1006e71c71/source/512x512bb.jpg"
+                                                    alt="">
+                                            </div>
+                                            Rs 200
+                                        </li>
+                                        <li class="active">
+                                            <div class="inner__table__img">
+                                                <img src="https://pngimg.com/uploads/netflix/netflix_PNG10.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://logospng.org/download/prime-video/logo-prime-video-512.png"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="half__screen">
+                        <label>Calculated Price</label>
+                        <!-- <input type="text" disabled value="200"> -->
+                        <input type="text" name="calculatedPrice"  [(ngModel)]="packageservice.packagedata.calculatedPrice">
+
+                    </div>
+                    <div class="half__screen">
+                        <label>Selling Price</label>
+                        <input type="text" name="sellingPrice"  [(ngModel)]="packageservice.packagedata.sellingPrice">
+
+                    </div>
+                    
+                </div>
+                <div class="button__group">
+                    <a [routerLink]="['/pack']"><button><img alt="cancel" src="/assets/icons/close-fill.svg">
+                            Cancel</button></a>
+                    <button class="cta"><img src="/assets/icons/save.svg" alt="cancel"> Save</button>
+                </div>
+            </div>
+            </form>
+        
+
+        </div>
+    </div>
+</div>

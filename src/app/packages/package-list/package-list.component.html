@@ -1,0 +1,437 @@
+<div class="container">
+    <div class="content__box">
+        <ul class="bread__crumbs">
+            <li>Home</li>
+            <li>Packages</li>
+        </ul>
+        <h2>Package Management</h2>
+        <div class="filters__addnew">
+            <div class="filter__choice">
+                <button (click)="toggleFilters()"><img src="/assets/icons/filter.svg" alt="filter"> Filter</button>
+                <span (click)="clearFilters()">clear all filters</span>
+                <div class="filter__options" *ngIf="showFilters">
+                    <div class="filter__content">
+                        <img src="/assets/icons/close.svg" alt="close" class="close__filter" (click)="toggleFilters()">
+                        <h4>Filter Options</h4>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                        </select>
+                        <input type="date">
+                        <div class="radio__group">
+                            <div class="radio__item">
+
+                                <label for="html">HTML</label>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                            </div>
+                            <div class="radio__item">
+                                <label for="html">HTML</label>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                            </div>
+                            <div class="radio__item">
+                                <label for="html">HTML</label>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                            </div>
+                            <div class="radio__item">
+                                <label for="html">HTML</label>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                            </div>
+
+                        </div>
+                        <input type="text" placeholder="Enter Text">
+                        <div class="button__group">
+                            <button (click)="toggleFilters()"><img src="/assets/icons/close-fill.svg" alt="cancel">
+                                Cancel</button>
+                            <button class="cta"><img src="/assets/icons/send-plane-fill.svg" alt="cancel">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a [routerLink]="['/pack/add']"><button class="cta"><img src="/assets/icons/add.svg" alt="add"> Add
+                    New</button></a>
+        </div>
+        <div class="filters__search">
+            <div class="filter__items">
+                <ul>
+                    <li>All Tiers</li>
+                    <li>More than 2 providers</li>
+                    <li>All Prices</li>
+                    <li>India Region</li>
+                    <!-- <li>Filter 5</li>
+                    <li>Filter 6</li>
+                    <li>Filter 7</li>
+                    <li>Filter 8</li>
+                    <li>Filter 1</li>
+                    <li>Filter 2</li>
+                    <li>Filter 3</li>
+                    <li>Filter 4</li>
+                    <li>Filter 5</li>
+                    <li>Filter 6</li>
+                    <li>Filter 7</li>
+                    <li>Filter 8</li> -->
+                </ul>
+            </div>
+            <div class="search__table">
+                <input type="text" placeholder="Search Packs">
+            </div>
+
+        </div>
+        <div class="full_screen row">
+            <div class="table__scroller">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>ID</th>
+                            <th>Pack Name</th>
+                            <th>Providers</th>
+                            <th>Provider List</th>
+                            <th>Calcualted Price</th>
+                            <th>Selling Price</th>
+                            <th>Creation Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody (click)="tableAction($event)" >
+                        <!-- <ng-container>
+                            <tr>
+                                <td colspan="10" class="noData">No data</td>
+                            </tr>
+                        </ng-container>
+                        <ng-container>
+                            <tr class="loading__row">
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                            </tr>
+                            <tr class="loading__row">
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                            </tr>
+                            <tr class="loading__row">
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                                <td>
+                                    <div class="loading"></div>
+                                </td>
+                            </tr>
+
+                        </ng-container> -->
+                        <!-- <div *ngFor="let t of "> -->
+                        <tr *ngFor="let j of packagesdata" >
+                            <td><input type="checkbox"></td>
+                            <td>{{j.packageId}}</td>
+                            <td>{{j.packageName}}</td>
+                            <td>{{j.provId.length}} Providers</td>
+                            <td>
+                                <div class="inner__table">
+                                    <ul>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/78/50/12/78501299-a66b-9655-c654-0b1006e71c71/source/512x512bb.jpg"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://pngimg.com/uploads/netflix/netflix_PNG10.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://logospng.org/download/prime-video/logo-prime-video-512.png"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>{{j.calculatedPrice}}</td>
+                            <td>{{j.sellingPrice}}</td>
+                            <td>{{j.createdDate | date}}</td>
+                            <td><span class="label safe__label"> Active </span></td>
+                            <td>
+                                <img src="/assets/icons/dots-vertical.svg" alt="action" class="action__item">
+                                <div class="table__action">
+                                    <ul>
+                                        <a (click)="editp(j.packageId)">
+                                            <li>Edit<img src="/assets/icons/pencil-fill.svg" alt="Edit"> </li>
+                                        </a>
+                                        <li>Disable<img src="/assets/icons/disable.svg" alt="Disable"></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    <!-- </div> -->
+                        <!-- <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>Maha Pack</td>
+                            <td>3 Providers</td>
+                            <td>
+                                <div class="inner__table">
+                                    <ul>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/78/50/12/78501299-a66b-9655-c654-0b1006e71c71/source/512x512bb.jpg"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://pngimg.com/uploads/netflix/netflix_PNG10.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://logospng.org/download/prime-video/logo-prime-video-512.png"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>2000</td>
+                            <td>2500</td>
+                            <td>2 Feb, 2022</td>
+                            <td><span class="label safe__label"> Active </span></td>
+                            <td>
+                                <img src="/assets/icons/dots-vertical.svg" alt="action" class="action__item">
+                                <div class="table__action">
+                                    <ul>
+                                        <a [routerLink]="['/pack/add']">
+                                            <li>Edit<img src="/assets/icons/pencil-fill.svg" alt="Edit"> </li>
+                                        </a>
+                                        <li>Disable<img src="/assets/icons/disable.svg" alt="Disable"></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>Mini Pack</td>
+                            <td>2 Providers</td>
+                            <td>
+                                <div class="inner__table">
+                                    <ul>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/78/50/12/78501299-a66b-9655-c654-0b1006e71c71/source/512x512bb.jpg"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://pngimg.com/uploads/netflix/netflix_PNG10.png" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>1500</td>
+                            <td>1900</td>
+                            <td>2 Feb, 2022</td>
+                            <td><span class="label safe__label"> Active </span></td>
+                            <td>
+                                <img src="/assets/icons/dots-vertical.svg" alt="action" class="action__item">
+                                <div class="table__action">
+                                    <ul>
+                                        <a [routerLink]="['/pack/add']">
+                                            <li>Edit<img src="/assets/icons/pencil-fill.svg" alt="Edit"> </li>
+                                        </a>
+                                        <li>Disable<img src="/assets/icons/disable.svg" alt="Disable"></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>3</td>
+                            <td>Venti Pack</td>
+                            <td>2 Providers</td>
+                            <td>
+                                <div class="inner__table">
+                                    <ul>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://pngimg.com/uploads/netflix/netflix_PNG10.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://logospng.org/download/prime-video/logo-prime-video-512.png"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>1800</td>
+                            <td>2000</td>
+                            <td>2 Feb, 2022</td>
+                            <td><span class="label safe__label"> Active </span></td>
+                            <td>
+                                <img src="/assets/icons/dots-vertical.svg" alt="action" class="action__item">
+                                <div class="table__action">
+                                    <ul>
+                                        <a [routerLink]="['/pack/add']">
+                                            <li>Edit<img src="/assets/icons/pencil-fill.svg" alt="Edit"> </li>
+                                        </a>
+                                        <li>Disable<img src="/assets/icons/disable.svg" alt="Disable"></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>4</td>
+                            <td>combo Pack</td>
+                            <td>2 Providers</td>
+                            <td>
+                                <div class="inner__table">
+                                    <ul>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/78/50/12/78501299-a66b-9655-c654-0b1006e71c71/source/512x512bb.jpg"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inner__table__img">
+                                                <img src="https://logospng.org/download/prime-video/logo-prime-video-512.png"
+                                                    alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>1500</td>
+                            <td>1800</td>
+                            <td>2 Feb, 2022</td>
+                            <td><span class="label safe__label"> Active </span></td>
+                            <td>
+                                <img src="/assets/icons/dots-vertical.svg" alt="action" class="action__item">
+                                <div class="table__action">
+                                    <ul>
+                                        <a [routerLink]="['/pack/add']">
+                                            <li>Edit<img src="/assets/icons/pencil-fill.svg" alt="Edit"> </li>
+                                        </a>
+                                        <li>Disable<img src="/assets/icons/disable.svg" alt="Disable"></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table__footer">
+                <div class="item__selection">
+                    <span>Items per page</span>
+                    <select>
+                        <option value="1">10</option>
+                        <option value="1">20</option>
+                        <option value="1">30</option>
+                    </select>
+                </div>
+                <div class="table__summary">
+                    <span>Showing 1-10 of 122</span>
+                </div>
+                <div class="pagination">
+                    <button><img src="/assets/icons/chevrons-left.svg" alt="First"></button>
+                    <button><img src="/assets/icons/chevron-left.svg" alt="Previous"></button>
+                    <span>Page 1 of 12</span>
+                    <button><img src="/assets/icons/chevron-right.svg" alt="Next"></button>
+                    <button><img src="/assets/icons/chevrons-right.svg" alt="Last"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

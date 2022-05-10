@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="content__box">
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Provider Dashboard</li>
+                <li>Provider Onboarding</li>
+            </ul>
+        </ul>
+
+        <div class="col__md">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Provider Details</h2>
+                    <a [routerLink]="['/ott-onboarding/']"><button><img src="/assets/icons/back.svg" alt="add">
+                            Back</button></a>
+                </div>
+                <div class="partner__info">
+                    <div class="partner__info__logo" (click)="uploadLogo()">
+                        Upload Logo
+                    </div>
+                </div>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Provider Name</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Provider Tier</td>
+                            <td>
+                                <select>
+                                    <option value="1">Tier 1</option>
+                                    <option value="2">Tier 2</option>
+                                    <option value="3">Tier 3</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Concurrent Views</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>Offered Price</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>End User Price</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>Valid From</td>
+                            <td><input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td>Valid To</td>
+                            <td><input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td>Staging Key</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Production Key</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Contact Email</td>
+                            <td><input type="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Contact Phone</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>API Documentation</td>
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td>Provider Logo</td>
+                            <td><input type="file" id="partner__logo"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="button__group">
+                    <a [routerLink]="['/ott-onboarding/']"><button><img alt="cancel" src="/assets/icons/close-fill.svg">
+                            Cancel</button></a>
+                    <a [routerLink]="['/ott-onboarding/config']"><button class="cta"><img
+                                src="/assets/icons/settings.svg" alt="cancel"> Add Configurations</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<!-- <p>loginmodule works!</p> -->
+<div class="container">
+    <h1>Login Page</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="loginprocessed()">
+        <label>User Name</label>
+        <input type="text" formControlName="username">
+        <label>Password</label>
+        <input type="password" formControlName="password">
+        <button type="submit" >Login</button>
+    </form>
+</div>

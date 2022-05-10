@@ -1,0 +1,86 @@
+.noPadding {
+    padding: 0 !important;
+}
+.mobileOnly {
+    display: none;
+}
+.container {
+    padding: 1rem 2rem;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+.col__xs,
+.col__sm,
+.col__md,
+.col__lg,
+.col__xl {
+    border: 1px solid var(--lightContrast);
+    width: 100%;
+    padding: 20px;
+    margin: 1rem auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    box-shadow: 0px 0px 31px -8px var(--shadowContrast);
+    -webkit-box-shadow: 0px 0px 31px -8px var(--shadowContrast);
+    -moz-box-shadow: 0px 0px 31px -8px var(--shadowContrast);
+}
+.col__xs {
+    max-width: 320px;
+}
+.col__sm {
+    max-width: 500px;
+}
+.col__md {
+    max-width: 720px;
+}
+.col__lg {
+    max-width: 1080px;
+}
+.full__screen {
+    width: 100%;
+}
+.half__screen {
+    width: 49.56%;
+}
+.third__screen {
+    width: 32.8%;
+}
+.screen__2-3 {
+    width: 65.2%;
+}
+.quarter__screen {
+    width: 24.35%;
+}
+.screen__3-4 {
+    width: 74.5%;
+}
+
+@media (max-width: 900px) {
+    .third__screen,
+    .quarter__screen,
+    .screen__3-4 {
+        width: 49.65%;
+    }
+}
+@media (max-width: 720px) {
+    .half__screen,
+    .third__screen,
+    .quarter__screen,
+    .screen__3-4 {
+        width: 100%;
+    }
+    .mobileOnly {
+        display: inherit;
+    }
+    .container {
+        padding: 0 0.25rem;
+    }
+}

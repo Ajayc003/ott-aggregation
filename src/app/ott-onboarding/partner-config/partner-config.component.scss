@@ -1,0 +1,45 @@
+pdf-viewer {
+    float: right;
+    margin: 1rem auto;
+    width: 100%;
+    height: calc(100vh - 295px);
+}
+.row {
+    align-items: flex-start;
+    .left__side {
+        height: calc(100vh - 250px);
+        overflow-y: auto;
+        .card {
+            margin-bottom: 1rem;
+        }
+    }
+}
+input:not(input[type="checkbox"]),
+select,
+textarea {
+    width: 250px;
+    margin-bottom: 0;
+}
+table {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 0.7rem;
+    tr {
+        td {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            &:first-child {
+                width: max-content;
+                text-align: left;
+            }
+            &:last-child {
+                width: max-content;
+                text-align: right;
+                font-weight: bold;
+                float: right;
+            }
+        }
+        &:nth-child(odd) {
+            background: var(--background);
+        }
+    }
+}

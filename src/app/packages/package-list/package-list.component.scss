@@ -1,0 +1,24 @@
+.inner__table {
+    max-height: 200px;
+    overflow-y: auto;
+    .inner__table__img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid var(--tableBorder);
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    li {
+        padding: 0.5rem;
+    }
+    img {
+        width: 50px;
+    }
+}

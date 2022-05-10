@@ -1,0 +1,82 @@
+// ubuntu font family import
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/src/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    src: url('/src/assets/fonts/Ubuntu-Italic.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/src/assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    src: url('/src/assets/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    src: url('/src/assets/fonts/Ubuntu-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+    src: url('/src/assets/fonts/Ubuntu-Light.ttf') format('truetype');
+}
+
+
+// opensans font family import
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/src/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    src: url('/src/assets/fonts/OpenSans-Italic.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/src/assets/fonts/OpenSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    src: url('/src/assets/fonts/OpenSans-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    src: url('/src/assets/fonts/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+    src: url('/src/assets/fonts/OpenSans-LightItalic.ttf') format('truetype');
+}

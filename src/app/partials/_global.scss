@@ -1,0 +1,127 @@
+body {
+    background: var(--background);
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+* {
+    scrollbar-color: var(--theme) var(--background);
+    scrollbar-width: thin;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--theme);
+    opacity: 0.8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme);
+    opacity: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    color: var(--font);
+}
+ul {
+    list-style: none;
+}
+.content__box {
+    background: var(--contentBox);
+    padding: 1rem;
+    padding-top: 0;
+    border-radius: 4px;
+    position: relative;
+}
+.bread__crumbs {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0;
+    li {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 0.7rem;
+        cursor: pointer;
+        transition: 0.4s;
+        &::after {
+            content: "/";
+            margin-left: 0.25rem;
+        }
+        &:last-child {
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+        &:hover {
+            color: var(--theme);
+        }
+    }
+}
+
+.inner__page__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--lightContrast);
+}
+.dark__theme {
+    .restricted__icon,
+    .full__screen img,
+    nav button img,
+    .settings__menu img {
+        filter: saturate(0) invert(1);
+        opacity: 1;
+    }
+}
+
+.loading {
+    background: #eee;
+    background: linear-gradient(90deg, var(--background) 8%, var(--shadowContrast) 18%, var(--background) 33%);
+    background-size: 200% 100%;
+    animation: tile-loading 2s linear infinite;
+    min-height: 1.5rem;
+}
+@keyframes tile-loading {
+    to {
+        background-position-x: -200%;
+    }
+}

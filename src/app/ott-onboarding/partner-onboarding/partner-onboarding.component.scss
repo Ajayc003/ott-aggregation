@@ -1,0 +1,53 @@
+.partner__info {
+    .partner__info__logo {
+        height: 120px;
+        width: 120px;
+        background: var(--lightContrast);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.7rem;
+        opacity: 0.6;
+        margin: 1rem auto;
+        cursor: pointer;
+    }
+    .partner__info__card {
+        h3 {
+            font-weight: bold;
+        }
+        button {
+            margin-top: 0.5rem;
+        }
+    }
+}
+input:not(input[type="checkbox"]),
+select,
+textarea {
+    width: 250px;
+    margin-bottom: 0;
+}
+table {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    tr {
+        td {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            &:first-child {
+                width: max-content;
+                text-align: left;
+            }
+            &:last-child {
+                width: max-content;
+                text-align: right;
+                font-weight: bold;
+                float: right;
+            }
+        }
+        &:nth-child(odd) {
+            background: var(--background);
+        }
+    }
+}

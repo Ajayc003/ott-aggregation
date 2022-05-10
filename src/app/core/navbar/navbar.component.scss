@@ -1,0 +1,88 @@
+@import "/src/app/partials/themes";
+nav {
+    background: var(--theme);
+    padding: 0.5em 0;
+    color: var(--background);
+    z-index: 5;
+    .container {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .brand__name {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--background);
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+        opacity: 0.8;
+    }
+}
+.nav__logo {
+    width: 80px;
+}
+
+.main__menu {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--background);
+    gap: 1.6em;
+    font-size: 0.8em;
+    z-index: 5;
+    a {
+        color: var(--background);
+    }
+    li {
+        position: relative;
+        cursor: pointer;
+        transition: 0.4s;
+        opacity: 0.8;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        margin-right: 0.5em;
+        img {
+            filter: brightness(0) invert(1);
+            width: 16px;
+            transition: 0.4s;
+        }
+
+        &:hover {
+            opacity: 1;
+            img {
+                scale: 1.2;
+            }
+        }
+    }
+}
+
+@media (max-width: 1040px) {
+    .themeSw {
+        display: none;
+    }
+    .main__menu {
+        position: absolute;
+        display: none;
+        top: 3.2em;
+        width: 100%;
+        left: 0;
+        background: var(--background);
+        flex-direction: column;
+        padding: 2em;
+        color: var(--font);
+        li {
+            position: static;
+            .sub__menu {
+                top: 0;
+                position: absolute;
+                height: 100%;
+                font-size: 0.8em;
+                padding: 2em;
+                width: 250px !important;
+            }
+        }
+    }
+}

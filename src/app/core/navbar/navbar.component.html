@@ -1,0 +1,46 @@
+<nav>
+    <div class="container">
+        <div class="heading__buttons">
+            <img src="/assets/img/brandLogo.png" alt="logo" class="nav__logo">
+            <span class="brand__name">Aggregation</span>
+        </div>
+
+        <div class="row">
+            <button class="cta mobileOnly" (click)="openMenu()"><img src="/assets/icons/menu-line.svg"
+                    alt="theme"></button>
+
+            <ul class="main__menu">
+                <!-- <li class="mm" routerLinkActive="active__link">
+                    Dashboard
+                </li> -->
+                <a [routerLink]="['/ott-onboarding']">
+                    <li class="mm" routerLinkActive="active__link">
+                        Providers
+                    </li>
+                </a>
+                <a [routerLink]="['/subscribers']">
+                    <li class="mm" routerLinkActive="active__link">
+                        Subscribers
+                    </li>
+                </a>
+                <a [routerLink]="['/pack']">
+                    <li class="mm" routerLinkActive="active__link">
+                        Packs
+                    </li>
+                </a>
+                <a [routerLink]="['/settings']">
+                    <li class="mm" routerLinkActive="active__link">
+                        Settings
+                    </li>
+                </a>
+                <a [routerLink]="['/login']">
+                    <li class="mm" routerLinkActive="active__link">
+                        Logout
+                    </li>
+                </a>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>

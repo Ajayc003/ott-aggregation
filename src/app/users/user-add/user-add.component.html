@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="content__box">
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Subscribers</li>
+                <li>New Subscriber Onboarding</li>
+            </ul>
+        </ul>
+
+        <div class="col__md">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Subscriber Details</h2>
+                    <a [routerLink]="['/subscribers']"><button><img src="/assets/icons/back.svg" alt="back">
+                            Back</button></a>
+                </div>
+                <div class="row">
+                    <div class="half__screen">
+                        <label>First Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="half__screen">
+                        <label>Last Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="half__screen">
+                        <label>Phone Number</label>
+                        <input type="text">
+                    </div>
+                    <div class="half__screen">
+                        <label>Email</label>
+                        <input type="text">
+                    </div>
+                    <div class="half__screen">
+                        <label>Gender</label>
+                        <select>
+                            <option value="1">-Select-</option>
+                            <option value="2">Male</option>
+                            <option value="3">Female</option>
+                            <option value="4">Other</option>
+                            <option value="5">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="half__screen">
+                        <label>DOB</label>
+                        <input type="date">
+                    </div>
+                    <div class="half__screen">
+                        <label>Location</label>
+                        <input type="text">
+                    </div>
+                    <div class="half__screen">
+                        <label>Pack</label>
+                        <select>
+                            <option value="1">-Select-</option>
+                            <option value="2">Mega Pack</option>
+                            <option value="3">Budget Pack</option>
+                            <option value="4">Venti Pack</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button__group">
+                    <a [routerLink]="['/subscribers']"><button><img alt="cancel" src="/assets/icons/close-fill.svg">
+                            Cancel</button></a>
+                    <button class="cta"><img src="/assets/icons/save.svg" alt="cancel"> Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

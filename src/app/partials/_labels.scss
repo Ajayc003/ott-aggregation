@@ -1,0 +1,25 @@
+.label {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid var(--theme);
+    border-radius: 2px;
+    font-weight: bold;
+}
+.danger__label {
+    border-color: rgba(192, 57, 43, 1);
+    color: rgba(192, 57, 43, 1);
+    background: rgba(192, 57, 43, 0.1);
+}
+
+.safe__label {
+    border-color: #27ae60;
+    color: #27ae60;
+    background: rgba(39, 174, 96, 0.1);
+}
+
+.pending__label {
+    border-color: #f1c40f;
+    color: #f1c40f;
+    background: rgba(241, 196, 15, 0.1);
+}

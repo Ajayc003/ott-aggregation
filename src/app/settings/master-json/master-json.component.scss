@@ -1,0 +1,60 @@
+.button__group {
+    margin-top: 1rem;
+}
+.defination {
+    height: calc(100vh - 18rem);
+    overflow-y: auto;
+}
+.preview {
+    background: var(--font);
+    padding: 1rem;
+    color: var(--background);
+    border-radius: 4px;
+    height: calc(100vh - 18rem);
+    overflow: auto;
+    pre {
+        margin: 0;
+    }
+    code {
+        font-family: "Fira Code", monospace;
+        font-size: 0.8rem;
+        margin-top: -2rem;
+    }
+}
+h4 {
+    font-weight: bold;
+}
+.row {
+    align-items: flex-start;
+}
+table {
+    tr {
+        th {
+            font-size: 0.7rem;
+            font-weight: bold;
+            background-color: var(--font);
+            color: var(--background);
+            text-transform: uppercase;
+            &:first-child {
+                border-radius: 4px 0 0 4px;
+            }
+            &:last-child {
+                border-radius: 0 4px 4px 0;
+            }
+        }
+        td,
+        th {
+            width: 22%;
+            text-align: left;
+            &:first-child {
+                width: 10px;
+                text-align: center;
+            }
+            &:nth-child(4),
+            &:nth-child(5) {
+                width: 100px;
+                text-align: center;
+            }
+        }
+    }
+}

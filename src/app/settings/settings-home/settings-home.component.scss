@@ -1,0 +1,16 @@
+.external__integrations {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        &:nth-child(odd) {
+            background: var(--tableBorder);
+        }
+    }
+}

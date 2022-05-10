@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="content__box">
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Settings</li>
+            </ul>
+        </ul>
+
+        <div class="col__md">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Settings</h2>
+                    <a [routerLink]="['/settings/master']"><button class="cta"><img src="/assets/icons/add.svg"
+                                alt="add"> Master JSON</button></a>
+                </div>
+                <div class="row">
+                    <ul class="external__integrations">
+                        <li>
+                            Enable 3rd Party Metadata Provider
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            Enable 3rd Party Biller
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            Enable 3rd Party Subscriber Module
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            Enable User Analytics
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            Enable Provider Statistics
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="button__group">
+                    <a [routerLink]="['/pack']"><button><img alt="cancel" src="/assets/icons/close-fill.svg">
+                            Cancel</button></a>
+                    <button class="cta"><img src="/assets/icons/save.svg" alt="cancel"> Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="card">
+    <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+    </label>
+    <div class="partner__image" style="background-image: url('{{partnerImage}}');">
+    </div>
+    <h4>{{partnerName}}</h4>
+    <a [routerLink]="['/ott-onboarding/view']">
+        <span class="view__link">
+            <img src="/assets/icons/chevron-right.svg" alt="View">
+            View
+        </span>
+
+
+    </a>
+    <table>
+        <tbody>
+            <tr>
+                <td>Category </td>
+                <td>{{partnerCategory}}</td>
+            </tr>
+            <tr>
+                <td>Subscribers</td>
+                <td>{{subscriberCount}}</td>
+            </tr>
+            <tr>
+                <td>Renewal On</td>
+                <td>{{partnerRenewal}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

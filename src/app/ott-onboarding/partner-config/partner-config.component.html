@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="content__box">
+        <!-- <a [routerLink]="['/command/list']"><button type="button" class="default__button float-right">Back</button></a> -->
+        <ul class="bread__crumbs">
+            <ul class="bread__crumbs">
+                <li>Home</li>
+                <li>Provider Dashboard</li>
+                <li>Provider Edit</li>
+                <li>Provider Configurations</li>
+            </ul>
+        </ul>
+
+        <div class="col__xl">
+            <div class="full__screen">
+                <div class="inner__page__heading">
+                    <h2>Provider Configurations</h2>
+                    <a [routerLink]="['/ott-onboarding/']"><button><img src="/assets/icons/back.svg" alt="add">
+                            Back</button></a>
+                </div>
+                <div class="row">
+                    <div class="half__screen left__side">
+                        <div class="card">
+                            <div class="inner__page__heading">
+                                <h4>Endpoints</h4>
+                                <button><img src="/assets/icons/add.svg" alt="Add"> Add More</button>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Data 1</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 2</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 3</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 4</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 5</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card">
+                            <h4>Master Data</h4>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Data 1</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 2</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 3</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 4</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 5</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card">
+                            <div class="inner__page__heading">
+                                <h4>Optional Data</h4>
+                                <button><img src="/assets/icons/add.svg" alt="Add"> Add More</button>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Data 1</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data 2</td>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <!-- Section to load the external pdf documentation -->
+                    <div class="half__screen right__side">
+                        <h4>Provider API Documentation</h4>
+                        <pdf-viewer [src]="'/assets/pdf/test.pdf'" [render-text]="true" [original-size]="false">
+                        </pdf-viewer>
+                    </div>
+                </div>
+                <div class="button__group">
+                    <a [routerLink]="['/ott-onboarding/']"><button><img alt="cancel" src="/assets/icons/close-fill.svg">
+                            Cancel</button></a>
+                    <a [routerLink]="['/ott-onboarding/config']"><button class="cta"><img src="/assets/icons/save.svg"
+                                alt="Save"> Save</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
